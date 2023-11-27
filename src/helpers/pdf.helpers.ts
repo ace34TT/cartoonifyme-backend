@@ -14,7 +14,7 @@ const assetsDirectory = path.resolve(__dirname, "../assets/");
 const tempDirectory = path.resolve(__dirname, "../tmp/");
 
 export const generateCalendar = async (output_folder: string) => {
-  const browser = await puppeteer.launch();
+  const browser = await puppeteer.launch({ headless: "new" });
   const page = await browser.newPage();
   // Set the size of the page to match the size of your PDF
   await page.setViewport({
