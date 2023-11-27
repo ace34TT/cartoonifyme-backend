@@ -20,7 +20,6 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // !
-
 app.get("/", async (req: Request, res: Response) => {
   return res.status(200).json({ message: "hello world" });
 });
